@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<script>
+	document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/20+"px";
+</script>
+<title>微信场景页</title>
+<style>
+	*{padding:0;margin:0;}
+	html,body{height:100%;}
+	.main{width:20rem;height:100%}
+	.tx{width:20rem;height:100%;background:#083846;position:absolute;left:0;}
+	.main div:nth-of-type(3){background:#9261BF;}
+	.main div:nth-of-type(2){background:#F3533C;}
+	.hide{display:none;}
+	 
+	.ani{ animation: .6s ani both;}
+	.arm{animation: .6s arm both;}
+	
+		@keyframes ani{
+			from{transform:translateY(0) ;}
+			to{transform:translateY(-100%) ;}
+		}
+		@keyframes arm{
+			from{transform:translateY(100%) ;}
+			to{transform:translateY(0) ;}
+		}
+   /*------------第一屏----------------*/
+  .warp{position:relative;width:20rem;height:100%;}
+ .img1{position:absolute;width:248px;top:1%;left:50%;margin-left:-124px;animation:0.6s move1 both;}	
+ .img2{position:absolute;width:185px;bottom:22%;left:50%;margin-left:-92px;animation:0.6s move2 both;}
+ .img3{width:30px;position:absolute;bottom:3%;left:50%;margin-left:-15px;animation:1s move3 both infinite;}
+  	@keyframes move1{
+  		from{top:-200%;}
+  		to{top:1%;}
+  	}
+  	@keyframes move2{
+  		from{left:-200%;}
+  		to{left:50%;}
+  	}	
+  	@keyframes move3{
+  		from{transform:translateY(-100%);}
+  		to{transform:translateY(0);}
+  	}
+  	 /*------------第二屏--------*/	
+  	 .img4{width:160px;position:absolute;top:10%;left:50%;margin-left:-80px;animation:1s move4 both;}
+  	 .img5{width:240px;position:absolute;top:28%;left:50%;margin-left:-120px;animation:2s move5 both;}
+  	 .img6{width:240px;position:absolute;top:28%;left:50%;margin-left:-120px;animation:.6s move6 both;}
+  	 .img7{width:240px;position:absolute;top:18%;left:50%;margin-left:-120px;animation:.6s move7 both;}
+  	  
+  	  @keyframes move4{
+  	 	from{}
+  	 	to{top:1%}
+  	 }
+  	  @keyframes move5{
+  	 	0%{top:18%}
+  	 	25%{top:33%}
+  	 	50%{top:23%}
+  	 	75%{top:30%}
+  	 	100%{top:28%;}
+  	 }	
+  	 @keyframes move6{
+  	 	from{left:-200%}
+  	 	to{left:50%;}
+  	 }
+  	 @keyframes move7{
+  	 	from{transform:scale(0.7);}
+  	 	to{transform:scale(1.2);}
+  	 }	
+  	 /*------------第三屏----------------*/		
+  	 .img8{width:200px;position:absolute;top:24%;left:50%;margin-left:-100px;animation:.6s move7 both;}
+  	 	/*------------第四屏----------------*/	
+  	 .img9{width:240px;position:absolute;left:50%;top:20%;margin-left:-120px; animation:1s move8 both;}
+  	 .img10{width:240px;position:absolute;left:50%;bottom:15%;margin-left:-120px; animation:1s move9 both;}
+  	 @keyframes move8{
+  	 	from{height:0;}
+  	 	to{height:200px;}
+  	 }
+  	 @keyframes move9{
+  	 	from{height:0;}
+  	 	to{height:50px;}
+  	 }				
+</style>
+
+</head>
+<body>
+ <div class="main">
+ 	<div class="tx">
+ 		<div class="warp hide">
+ 			<img src="img/pic_back.png" class="img9">
+ 			<img src="img/btn_join.png" class="img10">
+ 		</div>
+ 	</div>
+ 	<div class="tx">
+ 		<div class="warp hide">
+ 			
+ 			
+ 			<img src="img/icon_up.png" class="img3">
+ 			<img src="img/wording_design.png" class="img4">
+ 			<img src="img/circle-design.png" class="img5">
+ 			<img src="img/people_design.png" class="img6">
+ 			<img src="img/floating_design.png" class="img8">
+ 		</div>
+ 	</div>
+ 	<div class="tx">
+ 		<div class="warp hide">
+	 		<img src="img/wording.png" class="img4">
+	 		<img src="img/circle.png" class="img5">
+	 		<img src="img/people.png" class="img6">
+	 		<img src="img/floating_develop.png" class="img7">
+	 		<img src="img/icon_up.png" class="img3">
+ 		</div>
+ 		
+ 	</div>
+ 	<div class="tx">
+ 		<div class="warp">
+ 			<img src="img/cover.png" class="img1">
+ 			<img src="img/wording_cover.png" class="img2">
+ 			<img src="img/icon_up.png" class="img3">
+ 		</div>
+ 	</div>
+ </div>	
+ <script src="zepto.js" ></script>
+<script src="touch.js" ></script>
+<script src="weixin.js" ></script>
+</body>
+</html>
