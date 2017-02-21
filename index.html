@@ -101,7 +101,6 @@
 </style>
 <script type="text/javascript">
 	window.onresize=change;
-	window.onload=change;
 	function change(){
 		var width = document.documentElement.clientWidth;
 		if(width<=640){
@@ -109,6 +108,10 @@
 		}else{
 			$("#mask").css("display","block");
 		}
+	}
+	window.onload=function(){
+		$("#mask").css("display","block");
+		change();
 	}
 </script>
 
