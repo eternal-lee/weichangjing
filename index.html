@@ -168,7 +168,7 @@
 <script src="weixin.js" ></script>
 <script>
 	function loadMp4(src){
-		$('<audio loop autoplay id="audio"><source src="'+src+'" /></audio>').appendTo('body');
+		$('<audio loop autoplay id="audio"><source src="'+src+'" /></audio>').prependTo('body');
 	}
 	loadMp4("http://www.chuanlan.cn/Public/Serenade.mp3");
 	var audio = document.querySelector("#audio");
