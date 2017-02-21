@@ -99,6 +99,7 @@
   	 	to{height:50px;}
   	 }				
 </style>
+<script src="zepto.js" ></script>
 <script type="text/javascript">
 	window.onresize=change;
 	function change(){
@@ -112,12 +113,28 @@
 	window.onload=function(){
 		$("#mask").css("display","block");
 		change();
+		function loadMp4(src){
+			$('<audio loop id="audio"><source src="'+src+'" /></audio>').prependTo('body');
+		}
+		loadMp4("http://www.chuanlan.cn/Public/Serenade.mp3");
+		var audio = document.querySelector("#audio");
+		var play = document.querySelector("#play");
+		play.onclick = function(){
+			if(audio.paused){
+				audio.play();
+				$("#play").find(".pause").css("display","none")
+			}else{
+				audio.pause();
+				$("#play").find(".pause").css("display","block")
+			}
+		}
+		audio.play();
 	}
 </script>
 
 </head>
 <body>
- <div class="content">
+ <div class="content" id="content">
  	<div class="main">
 	 	<div class="tx">
 	 		<div class="warp hide">
@@ -163,25 +180,11 @@
  	</div>
  </div>
  
-<script src="zepto.js" ></script>
+
 <script src="touch.js" ></script>
 <script src="weixin.js" ></script>
 <script>
-	function loadMp4(src){
-		$('<audio loop autoplay id="audio"><source src="'+src+'" /></audio>').prependTo('body');
-	}
-	loadMp4("http://www.chuanlan.cn/Public/Serenade.mp3");
-	var audio = document.querySelector("#audio");
-	var play = document.querySelector("#play");
-	play.onclick = function(){
-		if(audio.paused){
-			audio.play();
-			$("#play").find(".pause").css("display","none")
-		}else{
-			audio.pause();
-			$("#play").find(".pause").css("display","block")
-		}
-	}
+
 </script>
 
 </body>
