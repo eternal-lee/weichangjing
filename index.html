@@ -119,7 +119,7 @@
 		loadMp4("http://www.chuanlan.cn/Public/Serenade.mp3");
 		var audio = document.querySelector("#audio");
 		var play = document.querySelector("#play");
-		play.onclick = function(){
+		play.ontouchend = function(){
 			if(audio.paused){
 				audio.play();
 				$("#play").find(".pause").css("display","none")
